@@ -1,0 +1,59 @@
+.container { max-width: 1200px; margin: 0 auto; padding: 0 0.5rem; line-height: 1.45; }
+.header { margin-bottom: 1.6rem; }
+.header h1 { margin: 0 0 0.25rem 0; font-size: 1.95rem; color: var(--dark); letter-spacing: -0.2px; }
+.header p { margin: 0; color: var(--muted); font-size: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.section { margin-bottom: 1.25rem; }
+.error { color: var(--danger); padding: 1rem; background: rgba(214,69,69,0.06); border-radius: 10px; }
+.flexBetween { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.table { width: 100%; border-collapse: collapse; background: transparent; border-radius: 12px; overflow: hidden; }
+.table th, .table td { padding: 1.05rem 1.1rem; text-align: left; border-bottom: 1px solid rgba(15,23,36,0.04); font-size: 1rem; line-height: 1.4; }
+.table th { background-color: rgba(245,247,250,0.6); font-weight: 700; color: var(--muted); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.6px; }
+.tag { padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; }
+.tagUpcoming { background: rgba(11,95,255,0.06); color: var(--primary-600); }
+.tagPast { background: rgba(15,23,36,0.04); color: var(--muted); }
+
+
+.appointmentList { display: flex; flex-direction: column; gap: 12px; }
+.appointmentCard { display: flex; justify-content: space-between; align-items: center; padding: 16px; border-radius: 14px; background: linear-gradient(180deg, var(--card-bg) 0%, #fbfdff 100%); box-shadow: var(--shadow-1); border: 1px solid rgba(15,23,36,0.04); transition: transform var(--transition), box-shadow var(--transition); }
+.appointmentCard:hover { transform: translateY(-5px); box-shadow: var(--shadow-2); }
+.appointmentInfo { display: flex; gap: 12px; align-items: center; }
+.appointmentAvatar { width: 64px; height: 64px; border-radius: 12px; background: linear-gradient(90deg, rgba(11,95,255,0.08), rgba(23,162,184,0.04)); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary-600); }
+.appointmentMeta { color: var(--muted); font-size: 0.95rem; }
+.appointmentDoctor { font-weight: 800; color: var(--primary-600); }
+.appointmentActions { display: flex; gap: 8px; align-items: center; }
+.appointmentActions .btn { padding: 8px 10px; font-size: 0.92rem; }
+.appointmentCancel { background: transparent; border: 1px solid rgba(15,23,36,0.06); color: var(--muted); }
+.emptyState { text-align: center; padding: 28px; color: var(--muted); background: transparent; border-radius: 10px; }
+
+@media (max-width: 720px) {
+	.appointmentCard { flex-direction: column; align-items: flex-start; gap: 10px; }
+	.appointmentActions { width: 100%; display: flex; justify-content: space-between; }
+}
+
+:global(.container) > :global(.card) { padding: 1.25rem; border-radius: 14px; }
+:global(.container) > :global(.card) .card-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+:global(.container) > :global(.card) h1 { margin: 0; font-size: 1.25rem; }
+:global(.container) > :global(.card) p { margin: 0; color: var(--muted); }
+
+.profileHero { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.avatar { width: 64px; height: 64px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: white; background: linear-gradient(90deg,var(--primary),var(--accent)); flex-shrink: 0; }
+
+.meta { display: flex; flex-direction: column; gap: 4px; }
+.meta .title { font-size: 1.1rem; font-weight: 800; color: var(--dark); }
+.meta .sub { font-size: 0.95rem; color: var(--muted); }
+
+.vitalsList { display: grid; gap: 10px; }
+.vitalsList li { padding: 12px 14px; border-radius: 12px; background: linear-gradient(180deg,#fff,#fbfdff); box-shadow: var(--shadow-1); list-style: none; display:flex; justify-content:space-between; align-items:center; }
+.vitalsList li span { color: var(--muted); font-size: 1rem; }
+
+@media (max-width: 720px) {
+	.profileHero { flex-direction: column; align-items: flex-start; }
+	.avatar { width: 64px; height: 64px; border-radius: 10px; }
+}
+
+:global(.container) > :global(.card) { padding: 1.5rem; border-radius: 16px; }
+:global(.form-input) { padding: 0.9rem 1rem; font-size: 1rem; border-radius: 10px; }
+:global(.btn) { padding: 0.85rem 1.15rem; font-size: 1rem; border-radius: 12px; }
+:global(.card) h1 { font-size: 1.35rem; line-height: 1.2; }
+:global(.card) p { font-size: 1rem; }
